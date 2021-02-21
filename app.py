@@ -86,9 +86,9 @@ def main():
 
     st.table(
         df_melhores_processadores\
-        .sort_values(coluna_custo_beneficio, ascending=True)\
+        .sort_values(coluna_custo_beneficio, ascending=False)\
         .dropna()\
-        .head(5)\
+        .tail(5)\
         .reset_index(drop=True)\
         .drop(['rank', 'modelo', 'fabricante'], axis=1)
     )
