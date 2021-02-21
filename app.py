@@ -63,12 +63,12 @@ def main():
 
 
     if not fabricante_escolhido == 'Todos':
-        df_melhores_processadores = df_processadores[
+        df_melhores_processadores = df_melhores_processadores[
             df_processadores['fabricante'] == fabricante_escolhido
         ]
     
     if not 'Todos' in modelo_escolhido:
-        df_melhores_processadores = df_processadores[
+        df_melhores_processadores = df_melhores_processadores[
             df_processadores['modelo'].isin(modelo_escolhido)
         ]
 
